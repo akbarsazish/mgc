@@ -1,0 +1,10 @@
+@media screen and (max-width: 670px) {
+  .navbar-brand {
+    display: none;
+  }
+  .navbar {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+}
