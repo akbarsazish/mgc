@@ -7,6 +7,11 @@ body {
     background-color: #fff;
 }
 
+.bg-color {
+    background-color: #fc0808;
+}
+
+
 .navbar {
     background-color: transparent;
 }
@@ -23,7 +28,7 @@ body {
 
 .nav-link:hover  {
     font-weight: bold;
-    color: #fe0000;
+    color: #fc0808;
 }
 
 .logo {
@@ -34,8 +39,8 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  max-height: 60vh;
-  min-height: 32vh;
+  max-height: 66vh;
+  min-height: 60vh;
   overflow: hidden;
 }
 
@@ -71,11 +76,11 @@ body {
 
 .second-menu-section {
     position: relative;
-    padding: 33px;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    margin-top: -44px;
+    margin-top: -40px;
     z-index: 9999;
     background-color: white;
 }
@@ -84,27 +89,23 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.second-menu {
-   display: flex;
-   justify-content: space-between;
-}
 
-.second-menu-item {
-    font-size: 16px;
-    list-style-type: none;
-
-}
 
 .second-menuLink {
     text-decoration: none;
     color: #000;
+    font-size: 14px;
+    cursor: pointer;
+}
 
-
+.second-menuLink:hover {
+    font-weight: bold;
+    color: #fc0808;
 }
 
 .second-menu-icon  {
     font-size: 22px;
-    color: #fe0000;
+    color: #fc0808;
 }
 
 .fa-plane {
@@ -112,9 +113,10 @@ body {
 }
 
 .more-slogan:hover {
-    color: #fe0000;
+    color: #fc0808;
     cursor: pointer;
 }
+
 
 
 /* slider */
@@ -139,6 +141,7 @@ body {
     object-fit: cover;
     border-radius: 5px;
 }
+
 
 .exclusiv-offer {
     margin-top: 66px;
@@ -181,6 +184,24 @@ body {
     color: #999;
     font-size: 2rem;
 }
+
+
+.flight-tracker-section {
+    padding: 22px;
+     background: #f5f7fa;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 5px;
+    margin-top: 66px;
+    margin-bottom: 66px;
+}
+
+
+.flight-tracker-img {
+    margin: 0 auto;
+    float: right;
+}
+
 
 /* best hotel */
 .best-hotel {
@@ -279,14 +300,6 @@ body {
     font-weight: 700;
 }
 
-.section-title:after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--secondary-color);
-    margin: 15px auto;
-}
 
 .about-content {
     padding: 80px 0;
@@ -401,3 +414,104 @@ footer {
     margin-bottom: 20px;
 }
 
+
+/* contact page  */
+
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #ff006e;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --success-color: #4cc9f0;
+}
+
+
+.hero-section {
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=500&q=60');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-info {
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-right: 20px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.contact-details h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(58, 134, 255, 0.25);
+}
+
+.map-section {
+    padding: 0 0 80px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section {
+    background-color: var(--light-color);
+    padding: 80px 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
