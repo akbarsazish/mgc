@@ -13,8 +13,8 @@
  
 //  connected programs
   var swiper = new Swiper("#connectedPrograms", {
-      spaceBetween: 10,
-      slidesPerView: 2,
+      spaceBetween: 5,
+      slidesPerView: 7,
       grabCursor: true,
       loop:true,
       zoom: true,
@@ -29,12 +29,12 @@
           spaceBetween: 5,
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 5,
           spaceBetween: 10,
         },
         1024: {
           slidesPerView: 7,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
       },
   });
