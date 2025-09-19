@@ -7,6 +7,7 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+
     breakpoints: {
         320: {
             slidesPerView: 2,
@@ -29,6 +30,32 @@
     }
 });
 
+ var swiper = new Swiper("#exclusiveOffer", {
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+    }
+});
+
 
 
 //  most popular destination
@@ -44,6 +71,7 @@
         modifier: 1,
         slideShadows: true,
       },
+
       pagination: {
         el: ".swiper-pagination",
       },
