@@ -121,7 +121,7 @@
                     <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible.</p>
                     
                     <div class="contact-form">
-                        <form id="contact-form">
+                        <form id="contact-form" action="send_email.php" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                 <div class="form-group">
@@ -294,18 +294,38 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Send the form using EmailJS
-            emailjs.sendForm('template_p30y79w', 'template_p30y79w', this)
-            .then(() => {
-                alert('Message sent successfully!');
-                this.reset(); // Clear the form
-            }, (error) => {
-                alert('Failed to send message: ' + error.text);
-            });
-        });
-    </script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    // Optional: Add client-side validation
+    const nameInput = document.querySelector('input[name="from_name"]');
+    const emailInput = document.querySelector('input[name="from_email"]');
+    const messageInput = document.querySelector('textarea[name="message"]');
+    
+    let isValid = true;
+    
+    if (!nameInput.value.trim()) {
+        alert('Please enter your name');
+        isValid = false;
+    }
+    
+    if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+        alert('Please enter a valid email address');
+        isValid = false;
+    }
+    
+    if (!messageInput.value.trim()) {
+        alert('Please enter your message');
+        isValid = false;
+    }
+    
+    if (!isValid) {
+        event.preventDefault();
+    } else {
+        // Show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.innerHTML = 'Sending...';
+        submitBtn.disabled = true;
+    }
+});
+</script>
   </body>
 </html>
