@@ -12,4 +12,15 @@
     min-height: 32vh;
 }
 
+
+.slogan-title {
+    font-size: 24px;
+}
+
+.slogan-text {
+    font-size: 16px;
+    padding:10px;
+}
+
+
 }
