@@ -151,13 +151,16 @@ body {
     border-radius: 5px;
 }
 
-
 .nextBtn {
   left: 0 !important;
 }
 
 .rightBtn {
   right: 0 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+     color: #000 !important;
 }
 
 .exclusiv-offer {

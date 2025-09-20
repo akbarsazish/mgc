@@ -294,38 +294,38 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    // Optional: Add client-side validation
-    const nameInput = document.querySelector('input[name="from_name"]');
-    const emailInput = document.querySelector('input[name="from_email"]');
-    const messageInput = document.querySelector('textarea[name="message"]');
-    
-    let isValid = true;
-    
-    if (!nameInput.value.trim()) {
-        alert('Please enter your name');
-        isValid = false;
-    }
-    
-    if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
-        alert('Please enter a valid email address');
-        isValid = false;
-    }
-    
-    if (!messageInput.value.trim()) {
-        alert('Please enter your message');
-        isValid = false;
-    }
-    
-    if (!isValid) {
-        event.preventDefault();
-    } else {
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        submitBtn.innerHTML = 'Sending...';
-        submitBtn.disabled = true;
-    }
-});
-</script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            // Optional: Add client-side validation
+            const nameInput = document.querySelector('input[name="from_name"]');
+            const emailInput = document.querySelector('input[name="from_email"]');
+            const messageInput = document.querySelector('textarea[name="message"]');
+            
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                alert('Please enter your name');
+                isValid = false;
+            }
+            
+            if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+                alert('Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (!messageInput.value.trim()) {
+                alert('Please enter your message');
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+            }
+        });
+    </script>
   </body>
 </html>
