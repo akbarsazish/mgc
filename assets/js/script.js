@@ -59,41 +59,6 @@
 
 
 //  most popular destination
-  var swiper = new Swiper("#popularDestination", {
-      effect: "coverflow",
-      grabCursor: true,
-      slidesPerView: 2,
-      loop:true,
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-
-      pagination: {
-        el: ".swiper-pagination",
-      },
-
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-    });
-
-
-//  most popular destination
   var swiper = new Swiper("#bestHotels", {
       centeredSlides: true,
       slidesPerView: 2,
@@ -121,3 +86,31 @@
     });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.swiper-slide.hoverForMoreInfo');
+  const infos = document.querySelectorAll('.moreInfo');
+
+  // Hide all .moreInfo initially
+  infos.forEach(info => {
+    info.style.display = 'none';
+  });
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('mouseenter', () => {
+      // Hide all .moreInfo divs
+      infos.forEach(info => info.style.display = 'none');
+
+      // Show only the corresponding .moreInfo div
+      if(infos[index]) {
+        infos[index].style.display = 'block';
+      }
+    });
+
+    slide.addEventListener('mouseleave', () => {
+      // Hide the corresponding .moreInfo when mouse leaves the slide
+      if(infos[index]) {
+        infos[index].style.display = 'none';
+      }
+    });
+  });
+});
