@@ -30,10 +30,15 @@
     }
 });
 
+
  var swiper = new Swiper("#exclusiveOffer", {
     slidesPerView: 1,
     grabCursor: true,
     loop: true,
+       autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         320: {
             slidesPerView: 1,
